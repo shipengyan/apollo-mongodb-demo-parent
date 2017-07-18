@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.UUID;
+
 /**
  * 模块名
  *
@@ -20,32 +22,33 @@ public class UserDaoTest extends BaseAppTest {
     private UserDao userDao;
 
     @Test
-    public void add() {
-        User user = new User();
-        user.setId(3L).setUsername("shipengyan").setAge(10);
-
-        userDao.save(user);
+    public void cleanAll() {
+        userDao.deleteAll();
+        log.debug("delete all suc");
     }
 
+    @Test
+    public void add() {
+        for (int i = 0; i < 10; i++) {
+            User user = new User(Long.valueOf(i), UUID.randomUUID().toString(), i + 10);
+            userDao.save(user);
+        }
+        log.debug("add user suc..");
+    }
 
     @Test
-    public void all() {
-        userDao.deleteAll();
-
-        userDao.save(new User(1L, "Alice", 20));
-        userDao.save(new User(2L, "Bob", 33));
-
-        // fetch all users
-        log.debug("Customers found with findAll():");
-        log.debug("-------------------------------");
-
-        userDao.findAll().forEach(System.out::println);
-
-
-        // fetch an individual user
-        log.debug("Customer found with name('Alice'):");
-        log.debug("--------------------------------");
+    public void query() {
         log.debug("user={}", userDao.findByUsername("Alice"));
+    }
+
+    @Test
+    public void queryAll() {
+        userDao.findAll().forEach(System.out::println);
+    }
+
+    @Test
+    public void delete() {
+        userDao.delete(1L);
     }
 
 }
