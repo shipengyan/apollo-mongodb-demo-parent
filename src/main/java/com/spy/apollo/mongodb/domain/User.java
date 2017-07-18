@@ -1,6 +1,8 @@
 package com.spy.apollo.mongodb.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 
@@ -13,11 +15,14 @@ import org.springframework.data.annotation.Id;
  */
 @Data
 @Accessors(chain = true)
+@NoArgsConstructor
+@ToString
 public class User {
     @Id
     private Long    id;
     private String  username;
     private Integer age;
+
 
     public User(Long id, String username, Integer age) {
         this.id = id;

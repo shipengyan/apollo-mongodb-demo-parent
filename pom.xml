@@ -45,6 +45,7 @@
             <version>0.0.3</version>
         </dependency>
 
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -62,6 +63,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.spy.apollo</groupId>
+            <artifactId>apollo-test</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 </project>
