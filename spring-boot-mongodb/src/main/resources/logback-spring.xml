@@ -58,6 +58,7 @@
         <logger name="org.apache.zookeeper" level="DEBUG"/>
 
         <logger name="java.sql" level="INFO"/>
+        <logger name="org.mongodb" level="DEBUG"/>
 
     </springProfile>
 

@@ -21,6 +21,7 @@ public class UserDaoTest extends BaseAppTest {
     @Autowired
     private UserDao userDao;
 
+
     @Test
     public void cleanAll() {
         userDao.deleteAll();
@@ -50,5 +51,10 @@ public class UserDaoTest extends BaseAppTest {
     public void delete() {
         userDao.delete(1L);
     }
+
+    @Test
+    public void update() {
+    }
+
 
 }
