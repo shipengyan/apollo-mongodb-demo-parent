@@ -41,6 +41,21 @@ public class UserDaoTest extends BaseAppTest {
     public void add2() {
         User user = new User(UUID.randomUUID().toString(), 100);
         userDao.save(user);
+
+        log.debug("user is {}", user); //TODO you can get id here！
+    }
+
+    /**
+     * TODO transaction??
+     */
+
+    @Test
+    public void add2Exception() {
+        User user = new User(UUID.randomUUID().toString(), 100);
+        userDao.save(user);
+
+        log.debug("user is {}", user);
+        int a = 1 / 0;
     }
 
 
