@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * 模块名
@@ -17,16 +18,23 @@ import org.springframework.data.annotation.Id;
 @Accessors(chain = true)
 @NoArgsConstructor
 @ToString
+@Document
 public class User {
     @Id
-    private Long    id;
+    private String  id;
     private String  username;
     private Integer age;
 
 
-    public User(Long id, String username, Integer age) {
+    public User(String id, String username, Integer age) {
         this.id = id;
         this.username = username;
         this.age = age;
     }
+
+    public User(String username, Integer age) {
+        this.username = username;
+        this.age = age;
+    }
+
 }

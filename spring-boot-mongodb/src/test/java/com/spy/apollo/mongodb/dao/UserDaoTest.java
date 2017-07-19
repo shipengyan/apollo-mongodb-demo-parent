@@ -31,11 +31,18 @@ public class UserDaoTest extends BaseAppTest {
     @Test
     public void add() {
         for (int i = 0; i < 10; i++) {
-            User user = new User(Long.valueOf(i), UUID.randomUUID().toString(), i + 10);
+            User user = new User("" + i, UUID.randomUUID().toString(), i + 10);
             userDao.save(user);
         }
         log.debug("add user suc..");
     }
+
+    @Test
+    public void add2() {
+        User user = new User(UUID.randomUUID().toString(), 100);
+        userDao.save(user);
+    }
+
 
     @Test
     public void query() {
