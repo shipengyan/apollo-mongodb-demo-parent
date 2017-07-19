@@ -36,6 +36,13 @@
                 <artifactId>spy-framework</artifactId>
                 <version>0.0.3</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.spy.apollo</groupId>
+                <artifactId>apollo-test</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

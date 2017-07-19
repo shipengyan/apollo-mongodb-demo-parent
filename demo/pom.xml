@@ -32,6 +32,15 @@
             <artifactId>mongodb-driver</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.spy.apollo</groupId>
+            <artifactId>apollo-test</artifactId>
+        </dependency>
 
     </dependencies>
 </project>

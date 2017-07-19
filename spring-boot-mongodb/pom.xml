@@ -60,8 +60,6 @@
         <dependency>
             <groupId>com.spy.apollo</groupId>
             <artifactId>apollo-test</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>

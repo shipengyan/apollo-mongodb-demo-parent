@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] [%class:%line] - %m %n</pattern>
@@ -17,6 +16,7 @@
     <logger name="com.codi" level="DEBUG"/>
     <logger name="com.spy" level="DEBUG"/>
     <logger name="io.netty" level="DEBUG"/>
+    <logger name="org.mongodb" level="DEBUG"/>
 
     <logger name="java.sql" level="INFO"/>
     <logger name="org.springframework" level="INFO"/>
